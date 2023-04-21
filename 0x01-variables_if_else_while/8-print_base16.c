@@ -6,7 +6,7 @@
  **/
 int main(void)
 {
-	int i = 0;
+	int i;
 	unsigned char a = '0';
 
 	for (i = 0; i <= 10; i++)
