@@ -1,13 +1,9 @@
-/*
- *File: positive_or_negative.c
- *Auth: Romykat81 <romaana.k7@gmail.com>
- *
- */
 #include <stdlib.h>
 #include <time.h>
-#include <time.h>
-/*
+#include <stdio.h>
+/**
  *main - determine if a random number is positive or negative or zero.
+ *
  *Return: 0 
  *
  */
