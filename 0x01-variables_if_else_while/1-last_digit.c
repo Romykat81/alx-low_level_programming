@@ -3,10 +3,13 @@
 #include <stdio.h>
 
 /*
- * Main main - Determine if the last digit of a random number is
+ * Main - Determine if the last digit of a random number is
  * greater than or less than 5, or is zero..
  *
  * Return 0
+ */
+/* main - determine if the last digit of a random number is
+ * greater than or less than 5, or is zero
  */
 int main(void)
 {
