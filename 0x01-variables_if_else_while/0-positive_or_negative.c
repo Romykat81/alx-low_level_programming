@@ -4,7 +4,7 @@
 /**
  *main - determine if a random number is positive or negative or zero.
  *
- *Return: 0 
+ *Return: 0
  *
  */
 
