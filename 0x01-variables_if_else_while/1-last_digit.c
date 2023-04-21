@@ -2,14 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 
-/*
- * Main - Determine if the last digit of a random number is
- * greater than or less than 5, or is zero..
+
+/**
+ * main - entry point last digit of random number is greater or less than 0
  *
- * Return 0
- */
-/* main - determine if the last digit of a random number is
- * greater than or less than 5, or is zero
+ *
+ * Return: always return 0
+ *
  */
 int main(void)
 {
