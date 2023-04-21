@@ -1,12 +1,13 @@
 #include <stdio.h>
 
-
 /**
- * main - program that prints all possible combinations of single-digit numbers
+ * main - prints combination of one digit numbers.
  *
  *
- * return: 0
+ *return: 0
+ *
  */
+
 int main(void)
 {
 	int i;
