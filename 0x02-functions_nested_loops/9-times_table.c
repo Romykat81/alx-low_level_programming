@@ -1,10 +1,10 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main: write a function that prints a 9x table starting at 0
- *
- *return:
+ * times_table - prints the times table from 0 - 9.
+(*
+ * Return: Nothing.
  */
 void times_table(void)
 {
