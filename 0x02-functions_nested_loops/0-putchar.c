@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- * main - print the string putchar in a single line
+ * main - Entry point
  *
- *return 0
+ * Return: Always returns 0
+ *
  */
 int main(void)
 {
