@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include "main.h"
+#include "6-abs.c"
 
 /**
  * _print_last_digit - main function
