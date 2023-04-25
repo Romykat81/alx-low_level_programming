@@ -2,12 +2,12 @@
 #include "main.h"
 
 /**
- *_abs - write a function that computes the abs value of an int
+ * _abs - main function
  *
- * @n: int variable
- *return: 0
+ * @n: integer to make absolute
+ * Return: int or int times negative
+ *
  */
-
 int _abs(int n)
 {
 	if (n > 0)
