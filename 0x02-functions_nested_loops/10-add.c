@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main: write a function that adds two integers and returns the result
+ *add - write a function that adds two integers and returns the result
  *
  *return:0
  */
