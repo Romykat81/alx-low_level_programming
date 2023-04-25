@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- *_isalpha -write a function that checks or alphabetic character
+ *_isalpha - write a function that checks or alphabetic character
  *@c: declaration variable
  *Return - 1 or 0
  */
