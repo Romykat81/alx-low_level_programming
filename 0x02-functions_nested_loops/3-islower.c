@@ -3,7 +3,7 @@
 
 /**
  *_islower - write a function that checks for lowercase character
- *
+ *@c: character to compare
  *Return: 1 or 0
  */
 
