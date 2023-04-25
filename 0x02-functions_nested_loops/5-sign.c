@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main - print the sign of a number
+ *print_sign - print the sign of a number
  *
+ * @n: character
  *Return: 0,1 or -1
  */
 
