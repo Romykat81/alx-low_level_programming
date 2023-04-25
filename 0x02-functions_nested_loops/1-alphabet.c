@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet prints alphabet
  *
  * Return: Always returns 0
  *
@@ -10,7 +10,6 @@
 void print_alphabet(void)
 {
 	char a;
-	
 	for(a = 'a'; a <= 'z'; a++)
 		_putchar(a);
 
