@@ -2,11 +2,13 @@
 #include "main.h"
 
 /**
- *_isalpha - write a function that checks or alphabetic character
- *@c: declaration variable
- *Return - 1 or 0
+ * _isalpha - main function
+ *
+ * @c: character to compare
+ *
+ * Return: 1 if true, 0 if false
+ *
  */
-
 int _isalpha(int c)
 {
 	if (c >= 65 && c <= 122)
