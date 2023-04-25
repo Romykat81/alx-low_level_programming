@@ -3,10 +3,10 @@
 #include "6-abs.c"
 
 /**
- * _print_last_digit - main function
+ * print_last_digit - main function
  *
- * @a: integer to make absolute
- * Return: int or int times negative
+ * @a: integer to get last digit of
+ * Return: last digit of n
  *
  */
 int print_last_digit(int a)
