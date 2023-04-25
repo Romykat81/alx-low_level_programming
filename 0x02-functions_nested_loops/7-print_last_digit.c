@@ -1,12 +1,13 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main - print last digit of a number
+ * _print_last_digit - main function
  *
- *return 0
+ * @a: integer to make absolute
+ * Return: int or int times negative
+ *
  */
-
 int print_last_digit(int a)
 {
 	if (a >= 0 && a <= 9)
