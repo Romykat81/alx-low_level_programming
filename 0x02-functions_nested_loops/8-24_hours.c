@@ -1,12 +1,11 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main - write a function that prints very minute of jack bauer
+ * jack_bauer - main thing
  *
- *return: 0
+ *
  */
-
 void jack_bauer(void)
 {
 	int a, b;
@@ -27,6 +26,5 @@ void jack_bauer(void)
 
 			_putchar ('\n');
 		}
-		return (0);
-	}
+		}
 }
