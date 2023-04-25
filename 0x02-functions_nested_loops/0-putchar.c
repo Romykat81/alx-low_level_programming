@@ -2,7 +2,8 @@
 #include "main.h"
 
 /**
- * main - print the stringputchar in a single line
+ * main - print the string putchar in a single line
+ *
  *return 0
  */
 int main(void)
