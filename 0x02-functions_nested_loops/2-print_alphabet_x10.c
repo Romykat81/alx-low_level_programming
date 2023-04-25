@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <main.h>
+
+/**
+ *main - print alphabet ten times
+ *
+ *Return: always 0
+ */
+void print_alphabet_x10(void)
+{
+	int b;
+	char a;
+
+	for (b = 0; b < 10; b++)
+	{
+		for (a = 'a'; a <= 'z'; a++)
+		{
+			_putchar(a);
+		}
+		_putchar('\n');
+	}
+	return (0);
+}
