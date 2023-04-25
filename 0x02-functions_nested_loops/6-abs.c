@@ -1,9 +1,10 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main - write a function that computes the abs value of an int
+ *_abs - write a function that computes the abs value of an int
  *
+ * @n: int variable
  *return: 0
  */
 
