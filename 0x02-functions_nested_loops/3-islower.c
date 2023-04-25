@@ -1,8 +1,8 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
- *main - write a function that checks for lowercase character
+ *_islower - write a function that checks for lowercase character
  *
  *Return: 1 or 0
  */
