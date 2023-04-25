@@ -11,13 +11,7 @@
  */
 int print_last_digit(int a)
 {
-	if (a >= 0 && a <= 9)
-	{
-		return (a);
-	}
-	else
-	{
-		a = _abs(a % 10);
-		return (a);
-	}
+	_putchar('0' + _abs(n % 10));
+	return (_abs(n % 10));
+
 }
