@@ -26,9 +26,9 @@ void print_number(int n)
 	}
 
 	for (i = 1; i < len; i++)
-	{
+	
 		expo *= 10;
-	}
+	
 	while (expo > 1)
 	{
 		_putchar((res / expo) % 10 + '0');
