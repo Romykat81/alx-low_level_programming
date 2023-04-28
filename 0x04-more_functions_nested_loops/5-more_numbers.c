@@ -4,6 +4,9 @@
 /**
  * more_numbers - prints the numbers
  *
+ * _puchar only 3 times
+ * Return: 0-14 x10 and new line
+ *
  */
 void more_numbers(void)
 {
@@ -16,9 +19,9 @@ void more_numbers(void)
 		{
 			if (i >= 10)
 			{
-				_putchar(i / 10 + '0')
+				_putchar((i / 10) + '0')
 			}
-			_putchar(i % 10 + '0');
+			_putchar((i % 10) + '0');
 		}
 		_putchar('\n');
 	}
