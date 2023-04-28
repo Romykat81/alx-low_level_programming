@@ -7,32 +7,41 @@
  */
 void print_number(int n)
 {
-	long len, res, i, temp, expo;
+	int i;
+	int d = 1;
+	unsigned int x = n;
+	unsigned int y = n;
+	int c = 0;
 
-	res = n;
-	expo = len = 1;
-
-	if (res < 0)
+	if (n == 0)
 	{
-		res *= -1;
+		_putchar('0');
+	}
+	if (n < 0)
+	{
 		_putchar('-');
+		n = n + 1;
+		n = -n;
+		y = n;
+		x = n;
+		x += 1;
+		y += 1;
 	}
 
-	temp = res;
-	while (temp >= 10)
+	while (x != 0)
 	{
-		len++;
-		temp /= 10;
+		x = x / 10;
+		c++;
 	}
-
-	for (i = 1; i < len; i++)
-	
-		expo *= 10;
-	
-	while (expo > 1)
+	for (i = 1; i < c; i++)
 	{
-		_putchar((res / expo) % 10 + '0');
-		expo /= 10;
+		d *= 10;
 	}
-	_putchar(res % 10 + '0');
+	for (i = 0; i < c; i++)
+	{
+		_putchar(y / d + '0');
+		y = y % d;
+		d = d / 10;
+	}
+}
 }
