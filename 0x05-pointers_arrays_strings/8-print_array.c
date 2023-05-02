@@ -1,10 +1,10 @@
 #include "main.h"
-#include "2-strlen.c" 
+#include "2-strlen.c"
 #include <stdio.h>
 /**
  * print_array - prints array
  * @a: pointer
- * @n: how many times 
+ * @n: how many times
  */
 void print_array(int *a, int n)
 {
