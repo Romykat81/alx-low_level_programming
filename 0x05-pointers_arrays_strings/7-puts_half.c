@@ -5,7 +5,7 @@
  *
  * @str: string to split
  */
-void puts_half(char str)_
+void puts_half(char str)
 {
 	int i;
 	int c = 0;
