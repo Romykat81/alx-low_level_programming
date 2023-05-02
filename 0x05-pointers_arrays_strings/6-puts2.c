@@ -5,7 +5,7 @@
  *
  *@str: string to put
  */
-void puts2(char*str)
+void puts2(char *str)
 {
 	int i;
 
