@@ -2,12 +2,10 @@
 #include "2-strlen.c"
 #include <stdio.h>
 /**
- * _strcpy - main to copy
- *
+ * char *_strcpy - a function that copies the string pointed to by src
  * @dest: copy to
  * @src: copy from
- *
- * return: a char
+ * Return: string
  */
 char *_strcpy(char *dest, char *src)
 {
