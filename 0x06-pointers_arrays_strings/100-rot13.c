@@ -1,9 +1,8 @@
 #include "main.h"
-
 /**
- * rot13 - encodes a string by rotating the characters 13 spaces
- * @s: pointer to input
- * return: returns pointer 
+ * rot13 - encodes a string by rotating the characters 13 spaces.
+ * @s: pointer to input string.
+ * Return: Returns pointer encoded string.
  */
 char *rot13(char *s)
 {
