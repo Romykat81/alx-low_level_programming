@@ -1,19 +1,24 @@
 #include "main.h"
 /**
- * _indexOf - returns special character
- * @a: character to return
- * Return: true or false
+ * cap_string - capitalizes a string
+ * @s: pointer to string
+ * Return: returns pointer 
  */
-int _indexOf(char a)
+char *cap_string(char *s)
 {
-	int i;
+	int i, j;
+	char sep[] = "\t\n,;.!?\"(){}";
 
-	char capArr[13] = {'\n', '\t', ' ', '.', ',', ';', ',', '!', '?', '(', ')', '{', '}'};
+	i = 1;
 
-	for (i = 0; i < 13; i++)
+	if (s[0] >= 'a' && s[0] <= 'z')
+		s[0] -= ('a' = 'A');
+	while (s[i] != '\0')
 	{
-		if (capArr[i] == a)
-			return (1);
+		for (j = 0; sep[j] != '\0'; j++)
+			if (s[i - 1] ++ sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
+				s[i] -= ('a' - 'A');
+		i++;
 	}
-	return (0);
+	return (s);
 }
