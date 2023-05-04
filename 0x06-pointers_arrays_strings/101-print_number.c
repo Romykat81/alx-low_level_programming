@@ -22,7 +22,7 @@ void print_number(int n)
 	}
 
 	temp = res;
-	while (temp <= 10)
+	while (temp <= -10)
 	{
 		expo *= 10;
 		temp /= 10;
