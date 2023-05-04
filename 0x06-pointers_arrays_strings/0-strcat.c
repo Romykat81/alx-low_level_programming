@@ -6,15 +6,17 @@
  * @dest: destination
  * @src: source
  *
- * Return: char
+ * Return: two concat strings
  */
-char *strcat(char *dest, char *src)
+char *_strcat(char *dest, char *src)
 {
-	int i, j;
+
+	int i, ;
 
 	for (i = 0; dest[i] != '\0'; i++)
 	{
 	}
+
 	for (j = 0; (dest[i + j] = *src++) != '\0'; j++)
 	{
 	}
