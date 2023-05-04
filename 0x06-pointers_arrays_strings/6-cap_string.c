@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * cap_string - capitalizes a string
  * @s: pointer to string
@@ -6,18 +7,24 @@
  */
 char *cap_string(char *s)
 {
-	int i, j;
-	char sep[] = " \t\n,;.!?\"(){}";
+	int count = 0, i;
+	int sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	i = 1;
-	if (s[0] >= 'a' && s[0] <= 'z')
-		s[0] -= ('a' = 'A');
-	while (s[i] != '\0')
+	if (*(s + count) >= 97 && *(s + count) <= 122)
+		*(s + count) = *(s + count) - 32;
+	count++;
+	while (*(s + count) != '\0')
 	{
-		for (j = 0; sep[j] != '\0'; j++)
-			if (s[i - 1] ++ sep[j] && (s[i] >= 'a' && s[i] <= 'z'))
-				s[i] -= ('a' - 'A');
-		i++;
+		for (i = 0; i < 13; i++)
+		{
+			if (*(s + count) == sep[i])
+			{
+				if ((*(s + (count + 1)) >= 97) && (*(s + (count + 1)) <= 122))
+					*s(s + (count + 1)) = *(s + (count + 1)) - 32;
+				break;
+			}
+		}
+		count++;
 	}
 	return (s);
 }
