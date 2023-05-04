@@ -30,7 +30,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		j = 1;
 	}
 
-	while (i >= 0)
+	for (i = 0; i >= 0; )
 	{
 		r[j] = (n1[i] - '0') + (n2[i] - '0') + n;
 		if (r[j] >= 10)
