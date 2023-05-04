@@ -1,7 +1,8 @@
 #include "main.h"
-/** leet - encodes a string to leetspeek
- * @s: pointer to input
- * Return: returns a pointer to leetspeek
+/**
+ * leet - encodes a string into leetspeek.
+ * @s: pointer to input string.
+ * Return: Returns pointer to leetspeek string.
  */
 char *leet(char *s)
 {
