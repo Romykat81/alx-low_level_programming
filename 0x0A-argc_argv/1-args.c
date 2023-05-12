@@ -5,7 +5,7 @@
 /**
  * main - main func
  * @argc: argument c
- * @argv: vector 
+ * @argv: vector
  * return: always 0
  */
 int main(int argc, char *argv[])
