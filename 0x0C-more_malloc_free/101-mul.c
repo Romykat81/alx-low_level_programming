@@ -79,7 +79,7 @@ int main(int argc, char *argv[])
 		for (len2 = _strlen(s2) - 1; len2 >= 0; len2--)
 		{
 			dig2 = s2[len2] - '0';
-			carry += res[len1 + len2 + 1] * (dig1 + dig2);
+			carry += res[len1 + len2 + 1] + (dig1 + dig2);
 			res[len1 + len2 + 1] = carry % 10;
 			carry /= 10;
 		}
