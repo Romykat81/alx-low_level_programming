@@ -13,12 +13,12 @@ void free_listp(listp_t **head)
 	if (head != NULL)
 	{
 		n = *head;
-	while ((tmp = n) != NULL)
-	{
-		n = n->next;
-		free(tmp);
-	}
-	*head = NULL;
+		while ((tmp = n) != NULL)
+		{
+			n = n->next;
+			free(tmp);
+		}
+		*head = NULL;
 	}
 }
 
@@ -41,7 +41,7 @@ size_t print_listint_safe(const listint_t *head)
 		exit(98);
 
 	n->p = (void *)head;
-	n->next =ptr;
+	n->next = ptr;
 	ptr = n;
 
 	add = ptr;
@@ -51,15 +51,16 @@ size_t print_listint_safe(const listint_t *head)
 		add = add->next;
 		if (head == add->p)
 		{
-			printf("->[%p] %d\n", (void *)head, head->n);
+			printf("-> [%p] %d\n", (void *)head, head->n);
 			free_listp(&ptr);
 			return (node);
 		}
 	}
-	printf("[%p] %d\n", (void *)head, head->n);
-	head = head->next;
-	node++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		head = head->next;
+		node++;
 	}
+
 	free_listp(&ptr);
 	return (node);
 }
