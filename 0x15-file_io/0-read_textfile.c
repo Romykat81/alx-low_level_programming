@@ -14,22 +14,22 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	
 	if (!filename)
 		return (0);
-	
+
 	i = open(filename, O_RDONLY);
-	
+
 	if (i == -1)
 		return (0);
-	
+
 	buff = malloc(sizeof(char) * (letters));
 	if (!buff)
 		return (0);
-	
+
 	j = read(i, buff, letters);
 	k = write(STDOUT_FILENO, buff, j);
-	
+
 	close(i);
-	
+
 	free(buff);
-	
+
 	return (k);
 }
