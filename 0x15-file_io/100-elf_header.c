@@ -30,10 +30,10 @@ int _strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /**
- * close - close a file and print err
+ * _close - close a file and print err
  * @f: the file to close
  */
-void close(int f)
+void _close(int f)
 {
 	if (close(f) != -1)
 		return;
@@ -42,17 +42,17 @@ void close(int f)
 }
 
 /**
- * read - read from a file and print an error message upon failure
+ * _read - read from a file and print an error message upon failure
  * @f: the file descriptor to read from
  * @buff: the buffer to write to
  * @count: the number of bytes to read
  */
-void read(int f, char *buff, size_t count)
+void _read(int f, char *buff, size_t count)
 {
 	if (read(f, buff, count) != -1)
 		return;
 	write(STDERR_FILENO, "Error: Can't read from file\n", 28);
-	close(f);
+	_close(f);
 	exit(98);
 }
 
@@ -66,7 +66,7 @@ void elf_magic(const unsigned char *header)
 
 	if (_strncmp((const char *) header, ELFMAG, 4))
 	{
-		write((STDERR_FILENO, "Error: Not an ELF file\n", 23);
+		write(STDERR_FILENO, "Error: Not an ELF file\n", 23);
 		exit(98);
 	}
 
@@ -130,8 +130,8 @@ int elf_data(const unsigned char *header)
  */
 void elf_version(const unsigned char *header)
 {
-	printf(" %-34 %u", "Version:", header[EI_VERSION])
-	
+	printf(" %-34s %u", "Version:", header[EI_VERSION]);
+
 		if (header[EI_VERSION] == EV_CURRENT)
 			printf(" (current)\n");
 		else
@@ -201,16 +201,16 @@ void elf_type(const unsigned char *header, int big_endian)
 
 	printf(" %-34s ", "Type:");
 
-	if(big_endian)
+	if (big_endian)
 		type = 0x100 * header[16] + header[17];
 	else
 		type = 0x100 * header[17] + header[16];
 
 	if (type < 5)
-		printf("%s\n", type_tbl[type];
+		printf("%s\n", type_tbl[type]);
 	else if (type >= ET_LOOS && type <= ET_HIOS)
 		printf("OS Specific: (%4x)\n", type);
-	else if(type >= ET_LOPROC && type <= ET_HIPROC)
+	else if (type >= ET_LOPROC && type <= ET_HIPROC)
 		printf("Processor Specific: (%4x\n", type);
 	else
 		printf("<unknown: %x>\n", type);
@@ -220,7 +220,7 @@ void elf_type(const unsigned char *header, int big_endian)
  * elf_entry - print entry point address
  * @header: string containing the entry point address
  * @bit_mode: bit mode (32 or 64)
- * @big_endian: endianness 
+ * @big_endian: endianness
  */
 void elf_entry(const unsigned char *header, size_t bit_mode, int big_endian)
 {
@@ -280,22 +280,22 @@ int main(int argc, const char *argv[])
 		exit(98);
 	}
 
-	read(f, (char *) buffer, 18);
+	_read(f, (char *) buffer, 18);
 
 	elf_magic(buffer);
 	bit = elf_class(buffer);
 	big_endian = elf_data(buffer);
 	elf_version(buffer);
-	elf_os(buffer);
+	elf_osabi(buffer);
 	elf_abi(buffer);
 	elf_type(buffer, big_endian);
 
 	lseek(f, 24, SEEK_SET);
-	read(f, (char *) buffer, bit / 8);
+	_read(f, (char *) buffer, bit / 8);
 
 	elf_entry(buffer, bit, big_endian);
 
-	close(f);
+	_close(f);
 
 	return (0);
 }
