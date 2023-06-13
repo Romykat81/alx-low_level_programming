@@ -211,7 +211,7 @@ void elf_type(const unsigned char *header, int big_endian)
 	else if (type >= ET_LOOS && type <= ET_HIOS)
 		printf("OS Specific: (%4x)\n", type);
 	else if (type >= ET_LOPROC && type <= ET_HIPROC)
-		printf("Processor Specific: (%4x\n", type);
+		printf("Processor Specific: (%4x)\n", type);
 	else
 		printf("<unknown: %x>\n", type);
 }
@@ -232,6 +232,7 @@ void elf_entry(const unsigned char *header, size_t bit_mode, int big_endian)
 	{
 		while (addr && !*(header))
 			--addr, ++header;
+
 		printf("%x", *header & 0xff);
 
 		while (--addr > 0)
