@@ -85,7 +85,7 @@ typedef struct line_lists
 } line_list;
 
 /**
-*struct store_var_list - sll to store variables (r_var_list)
+*struct store_var_list - sll to store variables
 *@len: length of variable
 *@value: value of variable
 *@lv: length of value of variable
@@ -121,7 +121,7 @@ typedef struct data
     char input;
     int count;
     int stat;
-}my_shell;
+} my_shell;
 
 /*mem.c - memory functions*/
 void *_memcpy(char *dest, char *src, unsigned int n);

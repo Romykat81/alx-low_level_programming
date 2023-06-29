@@ -7,46 +7,46 @@
 */
 void cd_parent(my_shell *data)
 {
-    char pwd[PATH_MAX];
-    char *dir, *cd_pwd, *pwd2;
+	char pwd[PATH_MAX];
+	char *dir, *cd_pwd, *pwd2;
 
-    getcwd(pwd, sizeof(pwd));
-    cd_pwd = _strdup(pwd);
-    _setenv("OLDPWD", cd_pwd, data);
-    dir = data->args[1];
-    if (_strcmp(".", dir) == 0)
-    {
-        _setenv("PWD", cd_pwd, data);
-        free(cd_pwd);
-        return;
-    }
-    if (_strcmp("/", cd_pwd) == 0)
-    {
-        free(cd_pwd);
-        return;
-    }
-    pwd2 = cd_pwd;
-    rev_string(pwd2);
-    pwd2 = _strtok(pwd2, "/");
-    if (pwd2 != NULL)
-    {
-        pwd2 = _strtok(NULL, "\0");
+	getcwd(pwd, sizeof(pwd));
+	cd_pwd = _strdup(pwd);
+	_setenv("OLDPWD", cd_pwd, data);
+	dir = data->args[1];
+	if (_strcmp(".", dir) == 0)
+	{
+	_setenv("PWD", cd_pwd, data);
+	free(cd_pwd);
+	return;
+	}
+	if (_strcmp("/", cd_pwd) == 0)
+	{
+	free(cd_pwd);
+	return;
+	}
+	pwd2 = cd_pwd;
+	rev_string(pwd2);
+	pwd2 = _strtok(pwd2, "/");
+	if (pwd2 != NULL)
+	{
+	pwd2 = _strtok(NULL, "\0");
 
-        if (pwd2 != NULL)
-            rev_string(pwd2);
-    }
-    if (pwd2 != NULL)
-    {
-        chdir(pwd2);
-        _setenv("PWD", pwd2, data);
-    }
-    else
-    {
-        chdir("/");
-        _setenv("PWD", "/", data);
-    }
-    data->status = 0;
-    free(cd_pwd)
+	if (pwd2 != NULL)
+	rev_string(pwd2);
+	}
+	if (pwd2 != NULL)
+	{
+	chdir(pwd2);
+	_setenv("PWD", pwd2, data);
+	}
+	else
+	{
+	chdir("/");
+	_setenv("PWD", "/", data);
+	}
+	data->status = 0;
+	free(cd_pwd)
 }
 
 /*
@@ -56,10 +56,10 @@ void cd_parent(my_shell *data)
 */
 void cd_in(my_shell *data)
 {
-    char pwd[PATH_MAX];
-    char *dir, cd_pwd, cp;
+	char pwd[PATH_MAX];
+	char *dir, cd_pwd, cp;
 
-    getcwd(pwd, sizeof(pwd));
+	getcwd(pwd, sizeof(pwd));
 
     dir = data->args[1];
     if (chdir(dir) == -1)
