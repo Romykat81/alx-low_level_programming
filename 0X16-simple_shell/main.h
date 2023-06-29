@@ -204,3 +204,5 @@ int rep_char(char *in, int i);
 int charfirst(char *in, int *i);
 int check_syntax_error(my_shell *data, char *in, int i, int j);
 void print_syntax_error(my_shell *data, char *in, int i, int j);
+
+#endif
