@@ -9,7 +9,7 @@
  */
 int create_file(const char *filename, char *text_content)
 {
-	int dr, letters, rdrw;
+	int fd, letters, rdrw;
 
 	if (!filename)
 		return (-1);
@@ -30,7 +30,7 @@ int create_file(const char *filename, char *text_content)
 	 if (rwr == -1)
 		 return (-1);
 
-	 close(dr);
+	 close(fd);
 
 	 return (1);
 }
