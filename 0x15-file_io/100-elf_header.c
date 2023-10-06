@@ -46,7 +46,7 @@ void check_elf(unsigned char *e_ident)
  * 
  * return: Magic no.'s
  */
-void print_magic(unsignec char *e_ident)
+void print_magic(unsigned char *e_ident)
 {
 	int index;
 
