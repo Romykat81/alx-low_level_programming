@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <main.h>
+#include "main.h"
 
 /**
  *main - print the first 98 numbers of the fibonacci seq from 1
